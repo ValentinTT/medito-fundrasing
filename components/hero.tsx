@@ -6,7 +6,7 @@ interface HeroProps {
 
 const Hero = ({ src }: HeroProps) => {
   return (
-    <div className="w-full lg:w-[700px] rounded-md overflow-hidden -translate-y-1/2">
+    <div className="w-full lg:w-[700px] rounded-md overflow-hidden -translate-y-1/2 -mb-[20%]">
       <AspectRatio ratio={16 / 9}>
         <img src={src} alt="Fundraising Hero" />
       </AspectRatio>
