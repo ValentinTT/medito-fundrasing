@@ -4,7 +4,7 @@ import { Donor } from "@/types/donation";
 import { useEffect, useState } from "react";
 
 export function useDonors() {
-  const [donors, setDonors] = useState<{ donors: Donor[] }>({ donors: [] });
+  const [donors, setDonors] = useState<{ donors: Donor[] }>();
 
   useEffect(() => {
     getDonors().then(async (res) => {

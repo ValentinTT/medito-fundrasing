@@ -2,9 +2,19 @@
 import { Progress } from "@/components/ui/progress";
 import { useProgressDonation } from "./hook";
 import { cn, currencyFormatter, formatSocialMediaNumber } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const ProgressDonation = ({ className }: { className?: string }) => {
   const [progressData] = useProgressDonation();
+
+  if (progressData.goalAmount === 0)
+    return (
+      <section className={cn("max-w-3xl", className)}>
+        <Skeleton className="w-72 h-4" />
+        <Progress value={0} className="animate-pulse my-3 " />
+        <Skeleton className="ml-auto w-52 h-3" />
+      </section>
+    );
 
   return (
     <section className={cn("max-w-3xl", className)}>

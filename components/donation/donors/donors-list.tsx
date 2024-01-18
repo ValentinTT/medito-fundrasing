@@ -14,9 +14,15 @@ const DonorsList = ({ className }: { className?: string }) => {
   return (
     <div className={cn("", className)}>
       <div className="flex flex-wrap">
-        {donors.donors.slice(0, 5).map((donor, idx) => {
-          return <DonorItem donor={donor} Icon={icons[idx]} key={idx} />;
-        })}
+        {donors
+          ? donors.donors.slice(0, 5).map((donor, idx) => {
+              return <DonorItem donor={donor} Icon={icons[idx]} key={idx} />;
+            })
+          : new Array(5).fill(undefined).map((_, idx) => {
+              return (
+                <DonorItem donor={undefined} Icon={icons[idx]} key={idx} />
+              );
+            })}
       </div>
     </div>
   );

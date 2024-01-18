@@ -7,7 +7,10 @@ import DonorsList from "./donors/donors-list";
 const DonationCard = ({ className }: { className?: string }) => {
   return (
     <div
-      className={cn("sm:w-96 h-fit bg-white mx-4 p-5 rounded-sm ", className)}
+      className={cn(
+        "sm:min-w-96 sm:max-w-96 h-fit bg-white mx-4 p-5 rounded-sm ",
+        className
+      )}
     >
       <ProgressDonation />
 

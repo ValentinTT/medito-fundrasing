@@ -1,10 +1,19 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import { currencyFormatter, formatDateDifference } from "@/lib/utils";
 import { Donor } from "@/types/donation";
 import { LucideIcon } from "lucide-react";
 
 const DonorItem = ({ donor, Icon }: { donor?: Donor; Icon: LucideIcon }) => {
   if (donor === undefined)
-    return <span className="animate-pulse">skeleton</span>;
+    return (
+      <div className="flex items-center my-2 mx-4">
+        <Skeleton className="w-7 h-7 mr-5 rounded-sm" />
+        <div className="flex flex-col space-y-2">
+          <Skeleton className="w-[100px] h-3" />
+          <Skeleton className="w-[150px] h-3" />
+        </div>
+      </div>
+    );
 
   return (
     <div className="max-w-[250px] w-full my-2 mx-4 flex items-center">

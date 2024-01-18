@@ -1,4 +1,5 @@
 import { ProgressDonation } from "@/types/donation";
+import { delay } from "../donors/route";
 
 const mockProgress: ProgressDonation = {
   currentAmount: 679000,
@@ -9,6 +10,8 @@ const mockProgress: ProgressDonation = {
 
 export async function GET() {
   //Api call to stripe...
+
+  await delay(1000);
 
   return Response.json({ ...mockProgress });
 }
