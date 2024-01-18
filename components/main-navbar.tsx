@@ -1,3 +1,4 @@
+import Counter from "./counter/counter";
 import MeditoLogo from "./medito-logo/medito-log";
 import MeditoLogoAndText from "./medito-logo/medito-logo-text";
 
@@ -13,7 +14,7 @@ export const MainNavbar = () => {
       <h1 className="text-xl sm:text-2xl md:text-3xl flex items-center">
         Medito Fundraising
       </h1>
-      <ul>count</ul>
+      <Counter />
     </nav>
   );
 };

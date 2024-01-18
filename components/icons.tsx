@@ -1,4 +1,6 @@
 import {
+  AlarmCheck,
+  Bell,
   HeartHandshake,
   Laugh,
   LucideIcon,
@@ -19,4 +21,5 @@ export const Icons = {
   sparkles: Sparkle,
   zap: Zap,
   laugh: Laugh,
+  bell: Bell,
 };
