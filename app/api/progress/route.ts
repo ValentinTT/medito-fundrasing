@@ -1,5 +1,5 @@
+import { delay } from "@/lib/utils";
 import { ProgressDonation } from "@/types/donation";
-import { delay } from "../donors/route";
 
 const mockProgress: ProgressDonation = {
   currentAmount: 679000,

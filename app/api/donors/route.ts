@@ -1,4 +1,4 @@
-import { shuffle } from "@/lib/utils";
+import { delay, shuffle } from "@/lib/utils";
 import { Donor } from "@/types/donation";
 
 const donors: Donor[] = [
@@ -33,10 +33,6 @@ const donors: Donor[] = [
     time: "2023-03-03T18:30:00",
   },
 ];
-
-export function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 export async function GET() {
   //Api call to stripe...

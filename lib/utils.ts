@@ -58,3 +58,7 @@ export function formatDateDifference(startDate: Date, endDate: Date): string {
 export function shuffle<T>(array: T[]): T[] {
   return array.sort(() => Math.random() - 0.5);
 }
+
+export function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
