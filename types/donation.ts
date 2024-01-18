@@ -5,9 +5,9 @@ export type ProgressDonation = {
   currency: string;
 };
 
-export type Donour = {
+export type Donor = {
   name: string;
   amount: number;
   currency: string;
-  time: Date;
+  time: string;
 };

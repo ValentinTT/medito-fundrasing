@@ -1,3 +1,4 @@
+"use client";
 import { getProgress } from "@/services/getProgress";
 import { ProgressDonation } from "@/types/donation";
 import { useEffect, useState } from "react";
