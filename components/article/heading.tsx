@@ -8,7 +8,7 @@ const Heading = React.forwardRef<
   <h1
     ref={ref}
     className={cn(
-      `text-2xl md:text-4xl tracking-tight font-semibold py-4`,
+      `text-xl sm:text-2xl md:text-4xl tracking-tight font-semibold py-4`,
       className
     )}
     {...props}
